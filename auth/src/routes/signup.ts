@@ -43,7 +43,7 @@ router.post("/api/users/signup", [
   const userJWT = jwt.sign({
     id: user.id,
     email: user.email
-  }, "asdf")
+  }, process.env.JWT_KEY!)
 
   // Store JWT on session
   req.session = {
