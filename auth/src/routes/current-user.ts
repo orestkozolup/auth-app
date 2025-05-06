@@ -1,15 +1,12 @@
 import express from "express";
-import { body } from "express-validator";
 import jwt from "jsonwebtoken";
-
-import { BadRequestError } from "../errors/bad-request-error";
-import { validateRequest } from "../middlewares/validate-request";
 
 const router = express.Router();
 
 router.get("/api/users/currentuser", (req, res) => {
   if (!req.session?.jwt) {
-    res.send({ currentUser: null })
+    res.send({ currentUser: null });
+    return
   }
 
   try {
