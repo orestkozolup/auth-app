@@ -15,4 +15,12 @@ build:
       sync:
         manual:
           - src: "src/**/*.ts"
-            dest: .s
+            dest: .
+    - image: orestkozolup/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .
