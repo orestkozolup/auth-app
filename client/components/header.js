@@ -25,7 +25,7 @@ const Header = ({ currentUser }) => {
     ));
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-light px-5">
       <Link href="/">
         <a className="navbar-brand">Auth App</a>
       </Link>

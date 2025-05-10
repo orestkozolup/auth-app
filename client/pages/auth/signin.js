@@ -24,7 +24,7 @@ export default () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="m-5">
       <h1>Sign In</h1>
       <div className="form-group mb-3">
         <label>Email Address</label>
